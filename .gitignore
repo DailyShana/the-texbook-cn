@@ -1,0 +1,5 @@
+*.log
+*.pdf
+*.synctex
+answers.tex
+index.tex
