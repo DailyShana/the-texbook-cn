@@ -264,7 +264,7 @@
 
 \def\gbmark#1{\special{pdf: out 1 << /Title <FEFF#1> /Dest [ @thispage /XYZ 0 @ypos null ] >>}}
 
-\special{pdf: docview << /PageMode /UseOutlines >>}
+\special{pdf: docview << /PageMode /UseOutlines /OpenAction [ 0 /Fit ] >>}
 \def\bookmark#1#2{%
   \begingroup%
   \def\linebreak{}\def\TeX{TeX}\def\noindent{}\def\\{}\def\hfil{}\def\quad{}%
