@@ -189,6 +189,30 @@
     \vfill\eject} % output the chapter title page
   \tenpoint}
 
+\def\beginappendix#1 #2#3. #4\par{\global\exno=0
+  \subsecno=0
+  \def\chapno{#2#3}
+%  \ifodd\pageno
+%    \errmessage{You had too much text on that last page; I'm backing up}
+%    \advance\pageno by-1 \fi
+  \titlepage
+  \def\\{ } % \\'s in the title will be treated as spaces
+  \message{#1 #2#3:} % show the chapter title on the terminal
+  \bookmark{1}{#2#3. #4}
+  \def\MF{{\manual 89:;<=>:}} % slant the logo
+  \xdef\rhead{#2#3: #4\unskip}
+  {\def\TeX{T\kern-.2em\lower.5ex\hbox{E}\kern-.06em X}
+    \def\MF{{\vbox to30pt{}\manual ()*+,-.*}}
+    \def\\{#3}
+    \ifx\empty\\ \rightline{\inchhigh #2\kern-.04em}
+    \else\rightline{\inchhigh #2\kern-.06em#3\kern-.04em}\fi
+    \vskip 1.75pc
+    \baselineskip 36pt \lineskiplimit \titlelsl \lineskip 12pt
+    \let\\=\cr % now the \\'s are line dividers
+    \halign{\line{\titlefont\hfil##}\\#4\unskip\\}
+    \vfill\eject} % output the chapter title page
+  \tenpoint}
+
 \outer\def\subsection#1. {\medbreak\advance\subsecno by 1
   \bookmark{2}{\the\subsecno. #1}
   \noindent{\bf \the\subsecno.\enspace#1.\enspace}}
