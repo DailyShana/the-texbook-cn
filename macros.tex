@@ -105,7 +105,8 @@
   \let\sc=\eightrm
   \let\big=\tenbig
   \setbox\strutbox=\hbox{\vrule height8.5pt depth3.5pt width\z@}%
-  \normalbaselines\rm}
+  \normalbaselines\rm
+  \parindent=20pt}
 %
 \def\ninepoint{\def\rm{\fam0\ninerm}%
   \textfont0=\ninerm \scriptfont0=\sixrm \scriptscriptfont0=\fiverm
@@ -128,7 +129,8 @@
   \let\big=\ninebig
   \setbox\strutbox=\hbox{\vrule height8pt depth3pt width\z@}%
   \normalbaselines\rm
-  \ST{9}}
+  \ST{9}
+  \parindent=18pt}
 %
 \def\eightpoint{\def\rm{\fam0\eightrm}%
   \textfont0=\eightrm \scriptfont0=\sixrm \scriptscriptfont0=\fiverm
@@ -150,7 +152,8 @@
   \let\sc=\sixrm
   \let\big=\eightbig
   \setbox\strutbox=\hbox{\vrule height7pt depth2pt width\z@}%
-  \normalbaselines\rm}
+  \normalbaselines\rm
+  \parindent=16pt}
 
 \def\leftheadline{\hbox to \pagewidth{%
     \vbox to 10pt{}% strut to position the baseline
@@ -212,6 +215,15 @@
     \halign{\line{\titlefont\hfil##}\\#4\unskip\\}
     \vfill\eject} % output the chapter title page
   \tenpoint}
+
+\def\d@nger{\medbreak\begingroup\clubpenalty=10000
+\def\par{\endgraf\endgroup\medbreak} \ninepoint\noindent\hang\hangafter=-2\hangindent=21pt
+  \hbox to0pt{\hskip-\hangindent\dbend\hfill}}
+\outer\def\danger{\d@nger}
+\def\dd@nger{\medbreak\begingroup\clubpenalty=10000
+  \def\par{\endgraf\endgroup\medbreak} \ninepoint\noindent\hang\hangafter=-2\hangindent=3pc
+  \hbox to0pt{\hskip-\hangindent\dbend\kern1pt\dbend\hfill}}
+\outer\def\ddanger{\dd@nger}
 
 \outer\def\subsection#1. {\medbreak\advance\subsecno by 1
   \bookmark{2}{\the\subsecno. #1}
