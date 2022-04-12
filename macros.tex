@@ -221,7 +221,7 @@
   \hrule\kern1pt\nobreak \everypar{\strut}}
 
 \def\pdfdestx#1{%
-  \special{pdf:dest (#1) [@thispage /FitH @ypos]}%
+  \special{pdf:dest (#1) [@thispage /XYZ 0 @ypos null]}%
 }
 \def\pdflinkx#1#2{%
   \special{pdf:bann << /Type/Annot/Subtype/Link  /Border [0 0 0] /A << /S/GoTo/D (#1) >> >>}%
@@ -262,13 +262,13 @@
 
 %% pdf bookmarks
 
-\def\gbmark#1{\special{pdf: out 1 << /Title <FEFF#1> /Dest [ @thispage /FitH @ypos ] >>}}
+\def\gbmark#1{\special{pdf: out 1 << /Title <FEFF#1> /Dest [ @thispage /XYZ 0 @ypos null ] >>}}
 
 \special{pdf: docview << /PageMode /UseOutlines >>}
 \def\bookmark#1#2{%
   \begingroup%
   \def\linebreak{}\def\TeX{TeX}\def\noindent{}\def\\{}\def\hfil{}\def\quad{}%
-  \special{pdf:out #1 << /Title (#2) /Dest [ @thispage /FitH @ypos ] >>}%
+  \special{pdf:out #1 << /Title (#2) /Dest [ @thispage /XYZ 0 @ypos null ] >>}%
   \endgroup%
 }
 
