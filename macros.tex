@@ -221,7 +221,7 @@
   \hrule\kern1pt\nobreak \everypar{\strut}}
 
 \def\pdfdestx#1{%
-  \special{pdf:dest (#1) [@thispage /XYZ 0 @ypos null]}%
+  \smash{\raise\the\baselineskip\hbox{\special{pdf:dest (#1) [@thispage /XYZ 0 @ypos null]}}}%
 }
 \def\pdflinkx#1#2{%
   \special{pdf:bann << /Type/Annot/Subtype/Link  /Border [0 0 0] /A << /S/GoTo/D (#1) >> >>}%
