@@ -990,7 +990,7 @@ Plain \TeX\ 用原始控制系列 |\sfcode|~(它类似于 |\catcode|, 见附录 
 \endtt
 那么，~|\box3| 的高度，深度和宽度各是什么？
 找出 box1 和 box2 相对于 box3 的基准点的位置。
-\answer |\box3| 高度为 $2\pt$，深度为 $4\pt$，宽度为 $3\pt$。
+\answer \1|\box3| 高度为 $2\pt$，深度为 $4\pt$，宽度为 $3\pt$。
 从 |\box3| 的基准点出发，向右 $.75\pt$ 再向下 $3\pt$ 就是 |\box1| 的基准点；
 或者向右 $1\pt$ 就是 |\box2| 的基准点。
 
@@ -1636,7 +1636,7 @@ Plain \TeX\ 把 |\strut| 定义为宽度为零的不可见盒子，它正好延�
 %Appendices A or~B.
 %\answer |\def\llap#1{\hbox to 0pt{\hss#1}}|
 \dangerexercise 不偷看附录 A 或 B, 猜一下 |\llap| 的定义。
-\answer |\def\llap#1{\hbox to 0pt{\hss#1}}|
+\answer \1|\def\llap#1{\hbox to 0pt{\hss#1}}|
 
 %\dangerexercise (This is a sequel to exercise 12.\linexno,
 %but it's trickier.) \ Describe the result of

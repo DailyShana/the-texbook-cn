@@ -107,7 +107,7 @@ for $x = a$, $b$, or $c$.
 %\answer |$R(n,t)=O(t^{n/2})$, as $t\to0^+$.| \
 %(N.B.: `|O(|', not `|0('|.)
 \exercise 输入：$R(n,t)=O(t^{n/2})$, as $t\to0^+$。
-\answer |$R(n,t)=O(t^{n/2})$, as $t\to0^+$.|%
+\answer \1|$R(n,t)=O(t^{n/2})$, as $t\to0^+$.|%
 （注意是 `|O(|' 而不是 `|0('|。）
 
 %\danger Some mathematical styles insert a bit of extra space around
@@ -486,6 +486,7 @@ $\mit(\Gamma,\Delta,\Theta,\Lambda,\Xi,\Pi,\allowbreak\Sigma,\Upsilon,\Phi,\Psi,
 （第一个`0'是罗马体，第二个是粗体。上标`T'是罗马体。）
 \answer |$\bf\bar x^{\rm T}Mx={\rm0}\iff x=0$|。%
 （如果你在 |\rm|和 |0| 之间留下空格，你将浪费一个按键，但你无需感到愧疚。）
+
 %\dangerexercise Figure out how to typeset
 %`$S\subseteq\mit\Sigma\iff S\in\cal S$'.
 %\answer |$S\subseteq{\mit\Sigma}\iff S\in{\cal S}$|. In this case the
@@ -797,7 +798,7 @@ to a fixed point of~$T$.|\par
 ``Let $C$~be a closed, bounded, convex subset of a Hilbert space~$H$,
 and let $T$~be a nonexpansive self map of~$C$.
 Suppose that as $n\to\infty$, we have $a_{n,k}\to0$ for each~$k$,
-and $\gamma_n=\sum_{k=0}^\infty(a_{n,k+1}-a_{n,k})^+\to0$.
+and $\gamma_n=\sum_{k=0}^\infty(a_{n,k+1}-\1a_{n,k})^+\to0$.
 Then for each $x$~in~$C$, the infinite sum
 $A_nx=\sum_{k=0}^\infty a_{n,k}T^kx$ converges weakly
 to a fixed point of~$T$.''%
@@ -1753,7 +1754,7 @@ $\{\,p\mid\hbox{$p$ and $p+2$ are prime}\,\}$
 而且 |\hbox| 中的粘连不随外面行中单词间距的改变而改变。
 看看怎样得到允许断行的这样的公式。%
 [{\KT{9}提示}：在数学模式和水平模式之间来回变换。]
-\answer |$\{\,p\mid p$~and $p+2$ are prime$\,\}$|，假定 ^|\mathsurround| 为零。
+\answer \1|$\{\,p\mid p$~and $p+2$ are prime$\,\}$|，假定 ^|\mathsurround| 为零。
 更复杂的写法
 `|$\{\,p\mid p\ {\rm and}\ p+2\rm\ are\ prime\,\}$|' 不是正确的答案，
 因为断行不会在数学公式内部的 |\|\] ^^|\space|处（或者任何粘连处）出现，
@@ -2427,7 +2428,7 @@ $$\tenmath \prod_{j\ge0}\biggl(\sum_{k\ge0}a_{jk}z^k\biggr)
      {\scriptstyle k_0,k_1,\ldots\ge0\atop
       \scriptstyle k_0+k_1+\cdots=n}
    a_{0k_0}a_{1k_1}\ldots\,\Biggr).$$
-\answer |$$\prod_{j\ge0}\biggl(\sum_{k\ge0}a_{jk}z^k\biggr)|\parbreak
+\answer \1|$$\prod_{j\ge0}\biggl(\sum_{k\ge0}a_{jk}z^k\biggr)|\parbreak
         |  =\sum_{n\ge0}z^n\,\Biggl(\sum_|\parbreak
         |     {\scriptstyle k_0,k_1,\ldots\ge0\atop|\parbreak
         |      \scriptstyle k_0+k_1+\cdots=n}|\parbreak
@@ -2589,7 +2590,7 @@ $$\tenmath \mathop{{\sum}'}_{x\in A}f(x)\mathrel{\mathop=^{\rm def}}
 |  \setbox4=\hbox{${}'\mathsurround=0pt$}|\parbreak
 |  \dimen0=.5\wd0 \advance\dimen0 by-.5\wd2|\parbreak
 |  \ifdim\dimen0>0pt|\parbreak
-|    \ifdim\dimen0>\wd4 \kern\wd4 \else\kern\dimen0\fi\fi|\parbreak
+\1|    \ifdim\dimen0>\wd4 \kern\wd4 \else\kern\dimen0\fi\fi|\parbreak
 |  \mathop{{\sum}'}_{\kern-\wd4 #1}}|
 
 %\cchallenge You may be ready now for this display.

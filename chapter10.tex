@@ -209,7 +209,7 @@ $$ \abovedisplayskip 15pt plus 4pt minus 4pt
 %some output devices can't handle 101~rules all at once.)}
 \dangerexercise （在学会盒子和粘连以及看完第21章后再做。）
 看看怎样用 \TeX\ 画出 $\rm10\,cm$ 的这样的标尺。
-\answer {\obeylines|\def\tick#1{\vrule height 0pt depth #1pt}|
+\answer \1{\obeylines|\def\tick#1{\vrule height 0pt depth #1pt}|
 |\def\\{\hbox to 1cm{\hfil\tick4\hfil\tick8}}|
 |\vbox{\hrule\hbox{\tick8\\\\\\\\\\\\\\\\\\\\}}|
 \noindent （你也可以试着在各毫米处都标上刻度线，以看看你的系统的表现；%

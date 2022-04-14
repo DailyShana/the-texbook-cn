@@ -554,7 +554,7 @@ $$\vbox{\+\bf if $n<r$ \cleartabs&\bf then $n:=n+1$\cr
 假定用户不能回退到前一个制表符的位置；
 例如，如果输入 \hbox{`|\+&&\hskip-2em&x\cr|'}，
 不用费心将 `x' 放在第一和第二栏，只需把它放在第三栏的开头。（这个练习有点难。）
-\answer 这里我们保留在当前位置右边没有制表符时，用 |&| 插入新制表符的想法。
+\answer \1这里我们保留在当前位置右边没有制表符时，用 |&| 插入新制表符的想法。
 用于处理 |\+| 行的宏中只有一个需要修改；但（很不幸）它就是最复杂的那个：
 \begintt
 \def\t@bb@x{\if@cr\egroup % now \box0 holds the column
@@ -1266,7 +1266,7 @@ Will ^{Durant}'s {\sl The Life of Greece\/} (Simon \& Schuster, 1939).]
   \hbox to4em{\hss#1: }\ignorespaces}
 \everypar={\history} \def\\{\leavevmode{\it c\/}}
 \endtt
-这将省去 \TeX\ 的所有 |\halign| 工作，但得到本质上相同的结果。^^|\leavevmode|
+\1这将省去 \TeX\ 的所有 |\halign| 工作，但得到本质上相同的结果。^^|\leavevmode|
 
 %\danger Sometimes a template will apply perfectly to all but one or two of
 %the entries in a column. For example, in the exercise just given, the
@@ -2626,7 +2626,7 @@ and each of the two long diagonals.
 \immediate\write\ans{\string\ansno\chapno.$\infty$:}
 \copytoblankline （Dudeney 问题的解答。）%
 假设 |\one| 和 |\two| 宏分别排印代表一个和两个便士的竖直列表。
-这个问题可以用 ^|\valign| 解决，如下：
+这个问题可以\1用 ^|\valign| 解决，如下：
 \begintt
 \valign{\vfil#&\vfil#&\vfil#&\vfil#\cr
   \two&\one&\one&\one\cr
